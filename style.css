@@ -3,8 +3,9 @@
 :root {
   --cor-primaria: #111;
   --cor-secundaria: #f6f6f6;
-  --cor-terciaria: #fd2231; /* <- ATIVIDADE ---- trocar A COR */
+  --cor-terciaria: #470574; /* <- ATIVIDADE ---- trocar A COR */
   --cor-hover: #272727;
+  --cor-transf: #9370DB;
 }
 
 * {
@@ -79,18 +80,38 @@ body {
   padding: 40px;
 }
 
+.imgg{
+  width: 100%;      /* faz a imagem ocupar toda a largura do card */
+  height: 200px;    /* altura fixa */
+  object-fit: cover; /* corta a imagem para preencher o espaço */
+  border-radius: 100px; /* opcional, bordas arredondadas */
+}
+.contato1 {
+  display: inline-block;
+  background-color: var(--cor-terciaria); /* cor normal */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* animação suave */
+  margin-top: 10px;
+}
+
+/* muda a cor ao passar o mouse */
+.contato1:hover {
+  background-color: var(--cor-transf); /* cor ao passar o mouse */
+  transform: scale(1.05); /* pequeno aumento */
+}
+
 .card {
   background-color: var(--cor-hover);
-  border: 2px solid #888; /* <- ATIVIDADE ---- trocar por variável */
-  border-radius: 10px;
+  border: 2px solid #70025e; /* <- ATIVIDADE ---- trocar por variável */
+  border-radius: 20px;
   width: 250px;
   text-align: center;
   padding: 20px;
   transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
 }
 
 .card img {
@@ -116,6 +137,7 @@ button:hover {
   background-color: var(--cor-hover);
   border: 2px solid var(--cor-terciaria);
 }
+
 
 /* ---------- PÁGINA SOBRE ---------- */
 .about {
